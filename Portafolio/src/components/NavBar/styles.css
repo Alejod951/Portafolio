@@ -56,11 +56,11 @@ body {
     height: 72px;
     display: grid;
     place-items: center;
-    margin: 10px
+    
   }
   
   .nav-items > a:hover {
-    color: rgb(255 255 255 / 96%);
+    color: rgba(211, 215, 247, 0.96);
   }
   
   h2 {
