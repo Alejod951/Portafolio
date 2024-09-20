@@ -1,8 +1,5 @@
 import "./styles.css";
-import logo from "./logo.svg";
-import image1 from "./1.svg";
-import image2 from "./2.svg";
-import image3 from "./3.svg";
+import logo from "./logo.png";
 import { useEffect, useRef, useState } from "react";
 
 export const Navbar = () => {
@@ -31,83 +28,14 @@ export const Navbar = () => {
   return (
     <>
       <nav className={`${isNavbarVisible ? "visible" : ""}`}>
-        <img src={logo} />
+        <img src={logo} className="logo"/>
         <div className="nav-items">
           <a href="Portafolio">Portfolio</a>
           <a href="Skills">Skills</a>
           <a href="#">About</a>
         </div>
       </nav>
-      <section>
-        <div>
-          <h2>Portfolio</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-            itaque corporis optio unde quia, modi pariatur ea magni dolorum?
-          </p>
-        </div>
-        <img src={image3} />
-      </section>
-      <section className="shaded">
-        <img src={image1} />
-        <div>
-          <h2>Skills</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-            itaque corporis optio unde quia, modi pariatur ea magni dolorum?
-          </p>
-        </div>
-      </section>
-      <section>
-        <div>
-          <h2>About</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-            itaque corporis optio unde quia, modi pariatur ea magni dolorum?
-          </p>
-        </div>
-        <img src={image2} />
-      </section>
-      <section className="shaded">
-        <img src={image3} />
-        <div>
-          <h2>Contact</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-            itaque corporis optio unde quia, modi pariatur ea magni dolorum?
-          </p>
-        </div>
-      </section>
-      <section>
-        <div>
-          <h2>My Skills</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-            itaque corporis optio unde quia, modi pariatur ea magni dolorum?
-          </p>
-        </div>
-        <img src={image2} />
-      </section>
-      <section className="shaded">
-        <img src={image3} />
-        <div>
-          <h2>My Skills</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-            itaque corporis optio unde quia, modi pariatur ea magni dolorum?
-          </p>
-        </div>
-      </section>
-      <section>
-        <div>
-          <h2>My Skills</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-            itaque corporis optio unde quia, modi pariatur ea magni dolorum?
-          </p>
-        </div>
-        <img src={image1} />
-      </section>
+      
     </>
   );
 };

@@ -1,0 +1,131 @@
+/* Fondo general */
+.portfolio-container {
+  margin: 50px 0; /* Margen superior e inferior para separar el componente */
+  display: flex;
+}
+
+body {
+  background: #121212; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  padding-top: 10%;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Encabezado del portafolio */
+.portfolio-header {
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.portfolio-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Información personal */
+.portfolio-info h1 {
+  font-size: 2.5rem; /* Título principal más grande */
+  color: white;
+}
+
+.portfolio-info h2 {
+  font-size: 1.8rem; /* Subtítulo un poco más pequeño */
+  color: #cccccc; /* Color gris claro para contraste */
+  margin-top: 10px;
+}
+
+/* Descripción */
+.portfolio-description {
+  margin: 20px 0;
+  font-size: 1.2rem; /* Tamaño de fuente general un poco más grande */
+  text-align: center;
+  line-height: 1.6;
+  color: #dddddd; /* Un gris claro para el texto */
+}
+
+.email-container {
+  margin: 20px 0; /* Espaciado alrededor del contenedor */
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* Estilos para el cuadro del email */
+.email-box {
+  display: flex;
+  align-items: center; /* Centrar verticalmente el texto y el botón */
+  padding: 1%;
+}
+
+/* Estilo para el párrafo del email como un recuadro */
+.email-text {
+  background-color: #1e1e1e; /* Fondo oscuro como el de un bloque de código */
+  color: #ffffff; /* Texto blanco */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+  font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada */
+  margin-right: 10px; /* Espacio entre el texto y el botón */
+  overflow: hidden; /* Evitar desbordamiento */
+  text-overflow: ellipsis; /* Mostrar '...' si el texto es muy largo */
+  white-space: nowrap; /* Evitar saltos de línea */
+}
+
+/* Estilo para el botón de copiar */
+.copy-button {
+  background-color: #16202b; /* Color del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 15px; /* Espaciado interno */
+  cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+  transition: background-color 0.3s; /* Transición para el efecto hover */
+  
+}
+
+.copy-button:hover {
+  background-color: #030c16; /* Color más oscuro al pasar el mouse */
+}
+
+.copy-icon {
+  width: 15px;
+  height: 15px;
+  
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .portfolio-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-photo {
+    margin-bottom: 15px;
+  }
+
+  .portfolio-info h1 {
+    font-size: 2rem;
+  }
+
+  .portfolio-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-description {
+    font-size: 1rem;
+  }
+
+ /* Estilos para el contenedor del email */
+
+
+}

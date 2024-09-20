@@ -75,6 +75,13 @@ body {
     gap: 40px;
     padding: 100px 60px;
   }
+
+  logo {
+  width: 120%;
+  height: 120%;
+  
+  display: block;
+}
   
   section.shaded {
     background: #f9f9ff;
