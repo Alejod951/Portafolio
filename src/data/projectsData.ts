@@ -5,7 +5,7 @@ export const projects = [
         en: "Portafolio Personal",
         es: "Personal Portfolio",
       },
-      image: "/images/portfolio.png",
+      image: "https://raw.githubusercontent.com/Alejod951/Portafolio/refs/heads/main/src/assets/backend.png",
       shortDescription: {
         en: "Mi portafolio como desarrollador fullstack.",
         es: "My portfolio as a fullstack developer.",
