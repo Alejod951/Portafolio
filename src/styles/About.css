@@ -1,0 +1,123 @@
+/* About.module.css */
+
+.section {
+    padding: 4rem 2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: auto;
+    color: #ffffff;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .paragraph {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  
+  .smallParagraph {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+  }
+ 
+  
+  .callToAction {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .skillsTitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 2rem 0 1rem;
+    text-align: center; /* Centra el texto dentro del elemento */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Opcional: centra también el contenido en flex */
+    gap: 0.5rem;
+}
+  
+  .skillsContainer {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .skillsColumn {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+  }
+  
+  .columnTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 0.5rem; 
+    text-align: center; 
+  }
+  
+  .softSkillsList {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1rem; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .softSkillsList li {
+    font-size: 1.1rem;
+    padding-left: 0.5rem;
+    margin-bottom: 0.8rem;
+    color: #ffffff;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.056);
+    padding: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; /
+  }
+  
+
+  .Image {
+    width: 100px; /* Ajusta el ancho según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 10px auto; /* Centra la imagen y agrega margen */
+    display: block; /* Centra la imagen dentro del div */
+    border-radius: 8px; /* Redondea las esquinas de la imagen */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil alrededor */
+    transition: transform 0.3s ease; /* Efecto de transición */
+  }
+  
+  /* Efecto de zoom cuando el usuario pasa el ratón por encima */
+  .Image:hover {
+    transform: scale(1.09); /* Aumenta ligeramente la imagen */
+  }
+  
