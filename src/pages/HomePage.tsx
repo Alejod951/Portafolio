@@ -9,6 +9,7 @@ interface HomePageProps {
 const HomePage: React.FC<HomePageProps> = ({ language }) => {
   return (
     <div className="homepage">
+      
 
       <img
         className="hero-image"
