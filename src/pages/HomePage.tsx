@@ -33,11 +33,13 @@ const HomePage: React.FC<HomePageProps> = ({ language }) => {
         </div>
 
         <div className="btn">
-          <a href="https://drive.google.com/uc?export=download&id=1hMqZ1plCEUkoZCfDNIkFDessAkdXo7os">
-
-          </a>
-          <Link to="/contactme">{language === 'en' ? 'Contactame' : 'Contact me'}</Link>
-        </div>
+  <a 
+    href="mailto:Alejod951@gmail.com" 
+    className="contact-link"
+  >
+    {language === 'en' ? 'Contact me' : 'Contáctame'}
+  </a>
+</div>
 
 
       </div>
