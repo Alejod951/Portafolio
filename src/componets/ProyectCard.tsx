@@ -1,6 +1,6 @@
 // src/components/ProjectCard.tsx
 import React from "react";
-import { useNavigate } from "react-router-dom";
+
 import "../styles/ProjectCard.css";
 
 interface ProjectCardProps {
@@ -13,7 +13,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
-  id,
+
   title,
   image,
   shortDescription,
