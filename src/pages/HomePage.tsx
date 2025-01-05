@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/HomePage.css';
-import { Link } from 'react-router-dom';
 import profileImagen from '../assets/profile.png';
 
 interface HomePageProps {
