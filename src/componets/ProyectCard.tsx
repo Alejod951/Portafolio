@@ -22,17 +22,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
 
   
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleCardClick = () => {
-    navigate(`/projects/${id}`);
-  };
+  // const handleCardClick = () => {
+  //   navigate(`/projects/${id}`);
+  // };
+
+  // onClick={handleCardClick}
 
   return (
-    <div className="project-card" onClick={handleCardClick} style={{ cursor: "pointer" }}>
+    <div className="project-card"  style={{ cursor: "pointer" }}>
       <img src={image} alt={title[language]} />
       <h3>{title[language]}</h3>
-      <h3>{id}</h3>
       <p>{shortDescription[language]}</p>
       <a
         href={githubLink}
