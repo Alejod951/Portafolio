@@ -22,7 +22,7 @@ export const projects = [
       es: "E-commerce Platform: UUID-Store",
       en: "Plataforma de E-commerce: UUID-Store",
     },
-    image: "https://github.com/Alejod951/Portafolio/blob/main/src/assets/FaceMesh.png?raw=true",
+    image: "https://github.com/Alejod951/Portafolio/blob/main/src/assets/store.png?raw=true",
     shortDescription: {
       es: "An optimized e-commerce platform with a user-friendly interface for customers and advanced management tools for administrators.",
       en: "Una plataforma de e-commerce optimizada con una interfaz atractiva para clientes y herramientas avanzadas de gestión para administradores.",
