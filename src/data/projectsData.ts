@@ -32,6 +32,22 @@ export const projects = [
       es: "UUID-Store es una plataforma de e-commerce completa desarrollada con Vite, React, Node.js, Express.js y PostgreSQL. Los clientes pueden navegar por un catálogo de zapatillas, aplicar filtros avanzados, ver productos más solicitados y realizar compras a través de una pasarela de pago. Las funciones incluyen carrito de compras, perfiles de usuario y una interfaz optimizada y atractiva. Los administradores tienen acceso a métricas detalladas como ventas, visitas a la página, historial de compras y gestión de usuarios, incluyendo asignar roles de administrador, gestionar stock y detalles de los productos.",
     },
     githubLink: "https://github.com/Agus-Albarracin/uuid-store",
-  }
-  ,
-  ];
+  },
+  {
+    id: 3,
+    title: {
+      es: "TaskFlow: Plataforma de Gestión de Tareas Colaborativas",
+      en: "TaskFlow: Collaborative Task Management Platform",
+    },
+    image: "https://github.com/Alejod951/Portafolio/blob/main/src/assets/TaskFlow.png?raw=true", // 👈 agrega aquí la captura de tu proyecto
+    shortDescription: {
+      es: "Una aplicación moderna para organizar tableros y tareas en equipo con autenticación, tiempo real y una interfaz intuitiva.",
+      en: "A modern app to organize boards and tasks collaboratively with authentication, real-time updates, and an intuitive UI.",
+    },
+    longDescription: {
+      es: "TaskFlow es una plataforma de gestión de tareas desarrollada con React, Node.js, Express y PostgreSQL utilizando Prisma ORM. Permite autenticación con JWT y OAuth (Google), gestión de tableros y tareas con actualizaciones en tiempo real mediante WebSockets, y una experiencia de usuario moderna y responsiva. Es ideal para la organización personal y de equipos.",
+      en: "TaskFlow is a task management platform built with React, Node.js, Express, and PostgreSQL using Prisma ORM. It supports authentication with JWT and OAuth (Google), board and task management with real-time updates via WebSockets, and a modern, responsive UI. Designed for both personal and team organization.",
+    },
+    githubLink: "https://github.com/Alejod951/TaskFlow", // 👈 actualiza con el link real de tu repo
+  },
+];

@@ -1,4 +1,4 @@
-// src/components/Projects.tsx
+
 import React from "react";
 import { projects } from "../data/projectsData";
 import ProjectCard from "../componets/ProyectCard";
