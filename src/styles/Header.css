@@ -1,123 +1,231 @@
-/* Estilos básicos del Header */
-header {
-    background-color: rgba(20, 20, 20, 0.95);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    max-width: 800px;
-    height: 30px;
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0 1.5rem;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
 
-    margin: auto;
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.logo-name {
+  color: #fff;
+}
+
+.logo-dot {
+  color: #5334ef;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.25s ease;
+  position: relative;
+  padding-bottom: 3px;
+  white-space: nowrap;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #5334ef, #00d9ff);
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #fff;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Header actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* Language slider */
+.lang-slider {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.lang-option {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.04em;
+  transition: color 0.25s ease;
+  min-width: 20px;
+  text-align: center;
+}
+
+.lang-option.lang-active {
+  color: #fff;
+}
+
+.lang-track {
+  width: 38px;
+  height: 20px;
+  background: rgba(83, 52, 239, 0.25);
+  border: 1px solid rgba(83, 52, 239, 0.45);
+  border-radius: 10px;
+  position: relative;
+  transition: background 0.25s ease;
+  flex-shrink: 0;
+}
+
+.lang-slider:hover .lang-track {
+  background: rgba(83, 52, 239, 0.4);
+}
+
+.lang-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5334ef, #00d9ff);
+  transition: left 0.25s ease;
+  box-shadow: 0 0 6px rgba(83, 52, 239, 0.6);
+}
+
+.lang-thumb.lang-thumb-right {
+  left: calc(100% - 16px);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  width: 32px;
+  height: 32px;
+}
+
+.bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger.open .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .nav-links {
+    gap: 1.2rem;
   }
-  
-  /* Enlaces y título */
-  header h1 {
-    font-size: 1.5rem;
-    color: #fff;
-    text-align: center;
-    flex-grow: 1;
+  .nav-link {
+    font-size: 0.82rem;
   }
-  
-  header a {
-    font-size: 1rem;
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  header a:hover {
-    transform: scale(1.2);
-  }
-  
-  /* Responsivo: Menú desplegable en móvil */
-  .menu-button {
-    display: none;
-    font-size: 1.5rem;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .menu-button:hover {
-    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
   }
 
-  .language-switch {
-    display: flex;
+  .nav-links {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    background: rgba(8, 8, 8, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
     align-items: center;
-    gap: 5px;
-    margin-left: 10px;
-    color: #fff;
+    padding: 2rem 0;
+    gap: 1.8rem;
+    transform: translateY(-110%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   }
-  
-  .language-switch label {
-    font-size: 1.5rem;
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
   }
-  
-  .language-switch input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
+
+  .nav-link {
+    font-size: 1.05rem;
   }
-  
-  /* Configuración del menú de navegación en modo móvil */
-  @media (max-width: 768px) {
-    header {
-        display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; 
-    
-      max-width: 90%; /* Hace el contenedor más pequeño en móvil */
-      max-height: 10%;
-      margin: 0 auto; /* Centra el header en móvil */
-    }
-  
-    nav {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 200px; /* Ajusta el ancho del menú */
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-      flex-direction: column;
-      align-items: flex-start;
-      padding-top: 60px;
-      transform: translateX(-100%);
-      transition: transform 0.4s ease;
-    }
-  
-    /* Muestra el menú con animación de izquierda a derecha */
-    nav.show {
-      display: flex;
-      transform: translateX(0);
-    }
-  
-    /* Botón de menú visible en móviles */
-    .menu-button {
-      display: block;
-      
-    }
-  
-    /* Estilo adicional para el botón de cerrar cuando el menú está abierto */
-    .menu-button {
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      z-index: 1;
-    }
-  
-    /* Coloca el título en el lado derecho */
-    header h1 {
-      text-align: right;
-      flex-grow: 0;
-      margin-left: auto; /* Alinea el título a la derecha */
-      font-size: 1.2rem; /* Ajusta el tamaño del título en móvil */
-    }
-  }
-  
+}

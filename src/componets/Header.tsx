@@ -1,53 +1,73 @@
 import React, { useState } from 'react';
 import '../styles/Header.css';
-import { Link } from 'react-router-dom';
 
-interface HeaderProps {
-  title: string;
-  links: { label: string; url: string }[];
-  language: 'es' | 'en';
-  toggleLanguage: () => void;
+interface NavLink {
+  label: { es: string; en: string };
+  id: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ title, links, language, toggleLanguage }) => {
-  const [menuVisible, setMenuVisible] = useState(false); // Estado para el menú
+interface HeaderProps {
+  language: 'es' | 'en';
+  toggleLanguage: () => void;
+  activeSection: string;
+}
 
-  const translateLabel = (label: string) => {
-    switch (label) {
-      case 'Home':
-        return 'Inicio';
-      case 'About':
-        return 'Acerca de';
-      case 'Projects':
-        return 'Proyectos';
-      default:
-        return label;
-    }
-  };
+const NAV_LINKS: NavLink[] = [
+  { label: { es: 'Inicio', en: 'Home' }, id: 'home' },
+  { label: { es: 'Sobre Mí', en: 'About' }, id: 'about' },
+  { label: { es: 'Habilidades', en: 'Skills' }, id: 'skills' },
+  { label: { es: 'Experiencia', en: 'Experience' }, id: 'experience' },
+  { label: { es: 'Proyectos', en: 'Projects' }, id: 'projects' },
+  { label: { es: 'Contacto', en: 'Contact' }, id: 'contact' },
+];
 
-  const translatedLinks = links.map((link) => ({
-    ...link,
-    label: language === 'es' ? link.label : translateLabel(link.label),
-  }));
+const Header: React.FC<HeaderProps> = ({ language, toggleLanguage, activeSection }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuVisible(!menuVisible);
+  const handleNavClick = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    setMenuOpen(false);
   };
 
   return (
-    <header>
-      <button className="menu-button" onClick={toggleMenu}>☰</button>
-      <h1>{title}</h1>
-      <nav className={menuVisible ? 'show' : ''}>
-        {translatedLinks.map((link, index) => (
-          
-          <Link key={index} to={link.url}>{link.label}</Link>
-          
-        ))}
-      </nav>
-      <div className="language-switch">
-        <label>{language === 'es' ? '🇪🇸' : '🇺🇸'}</label>
-        <input type="checkbox" onChange={toggleLanguage} checked={language === 'en'} />
+    <header className="site-header">
+      <div className="header-inner">
+        <div className="logo" onClick={() => handleNavClick('home')}>
+          <span className="logo-name">Cristian</span>
+          <span className="logo-dot">.</span>
+        </div>
+
+        <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
+          {NAV_LINKS.map(link => (
+            <a
+              key={link.id}
+              className={`nav-link ${activeSection === link.id ? 'active' : ''}`}
+              onClick={() => handleNavClick(link.id)}
+            >
+              {link.label[language]}
+            </a>
+          ))}
+        </nav>
+
+        <div className="header-actions">
+          <div className="lang-slider" onClick={toggleLanguage} aria-label="Toggle language">
+            <span className={`lang-option ${language === 'es' ? 'lang-active' : ''}`}>ES</span>
+            <div className="lang-track">
+              <div className={`lang-thumb ${language === 'en' ? 'lang-thumb-right' : ''}`} />
+            </div>
+            <span className={`lang-option ${language === 'en' ? 'lang-active' : ''}`}>EN</span>
+          </div>
+          <button
+            className={`hamburger ${menuOpen ? 'open' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menu"
+          >
+            <span className="bar" />
+            <span className="bar" />
+            <span className="bar" />
+          </button>
+        </div>
       </div>
     </header>
   );

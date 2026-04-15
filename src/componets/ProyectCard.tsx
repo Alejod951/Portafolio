@@ -1,7 +1,5 @@
-
-import React from "react";
-
-import "../styles/ProjectCard.css";
+import React from 'react';
+import '../styles/ProjectCard.css';
 
 interface ProjectCardProps {
   id: number;
@@ -9,40 +7,43 @@ interface ProjectCardProps {
   image: string;
   shortDescription: { es: string; en: string };
   githubLink: string;
-  language: "es" | "en";
+  language: 'es' | 'en';
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
-
   title,
   image,
   shortDescription,
   githubLink,
   language,
 }) => {
-
-  
-  // const navigate = useNavigate();
-
-  // const handleCardClick = () => {
-  //   navigate(`/projects/${id}`);
-  // };
-
-  // onClick={handleCardClick}
-
   return (
-    <div className="project-card"  style={{ cursor: "pointer" }}>
-      <img src={image} alt={title[language]} />
-      <h3>{title[language]}</h3>
-      <p>{shortDescription[language]}</p>
-      <a
-        href={githubLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={(e) => e.stopPropagation()} // Evita que el enlace interrumpa la navegación al detalle
-      >
-        {language === "es" ? "Ver en GitHub" : "View on GitHub"}
-      </a>
+    <div className="project-card">
+      <div className="card-image-wrapper">
+        <img src={image} alt={title[language]} className="card-image" />
+        <div className="card-overlay">
+          <a
+            href={githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-overlay-btn"
+          >
+            {language === 'es' ? '🔗 Ver en GitHub' : '🔗 View on GitHub'}
+          </a>
+        </div>
+      </div>
+      <div className="card-body">
+        <h3 className="card-title">{title[language]}</h3>
+        <p className="card-description">{shortDescription[language]}</p>
+        <a
+          href={githubLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="card-link"
+        >
+          {language === 'es' ? 'Ver proyecto →' : 'View project →'}
+        </a>
+      </div>
     </div>
   );
 };

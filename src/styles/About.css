@@ -1,123 +1,117 @@
-/* About.module.css */
-
-.section {
-    padding: 4rem 2rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: auto;
-    color: #ffffff;
-  }
-  
-  .title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #ffffff;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .paragraph {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .subtitle {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 1rem;
-  }
-  
-  .smallParagraph {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    color: #ffffff;
-  }
- 
-  
-  .callToAction {
-    font-size: 1.2rem;
-    color: #ffffff;
-    font-weight: 500;
-    text-align: center;
-    margin-top: 2rem;
-  }
-
-  .skillsTitle {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin: 2rem 0 1rem;
-    text-align: center; /* Centra el texto dentro del elemento */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Opcional: centra también el contenido en flex */
-    gap: 0.5rem;
+.about-section {
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-  
-  .skillsContainer {
-    display: grid;
-    gap: 1rem;
-    margin-top: 1.5rem;
 
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.about-layout {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  max-width: 1100px;
+  width: 100%;
+  margin-bottom: 3.5rem;
+}
+
+.about-text-col {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.about-paragraph {
+  font-size: 1.02rem;
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.82;
+}
+
+.about-cards-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 200px;
+}
+
+.highlight-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.1rem 1.3rem;
+  backdrop-filter: blur(10px);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.highlight-card:hover {
+  border-color: rgba(83, 52, 239, 0.35);
+  transform: translateY(-3px);
+}
+
+.highlight-icon {
+  font-size: 1.7rem;
+  flex-shrink: 0;
+}
+
+.highlight-number {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.1rem;
+}
+
+.highlight-label {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Soft skills */
+.soft-skills-block {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.soft-skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.soft-skill-tag {
+  background: rgba(83, 52, 239, 0.08);
+  border: 1px solid rgba(83, 52, 239, 0.25);
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0.38rem 1rem;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+.soft-skill-tag:hover {
+  background: rgba(83, 52, 239, 0.2);
+  border-color: rgba(83, 52, 239, 0.55);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .about-layout {
+    flex-direction: column;
   }
-  
-  .skillsColumn {
+
+  .about-cards-col {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .highlight-card {
     flex: 1;
-    padding: 0.5rem;
-    border: 1px solid #ffffff;
-    border-radius: 8px;
+    min-width: 140px;
   }
-  
-  .columnTitle {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 0.5rem;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    gap: 0.5rem; 
-    text-align: center; 
-  }
-  
-  .softSkillsList {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    gap: 1rem; 
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  
-  .softSkillsList li {
-    font-size: 1.1rem;
-    padding-left: 0.5rem;
-    margin-bottom: 0.8rem;
-    color: #ffffff;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.056);
-    padding: 0.5rem;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center; 
-    align-items: center; /
-  }
-  
-
-  .Image {
-    width: 100px; /* Ajusta el ancho según tus necesidades */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin: 10px auto; /* Centra la imagen y agrega margen */
-    display: block; /* Centra la imagen dentro del div */
-    border-radius: 8px; /* Redondea las esquinas de la imagen */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil alrededor */
-    transition: transform 0.3s ease; /* Efecto de transición */
-  }
-  
-  /* Efecto de zoom cuando el usuario pasa el ratón por encima */
-  .Image:hover {
-    transform: scale(1.09); /* Aumenta ligeramente la imagen */
-  }
-  
+}
