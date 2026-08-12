@@ -28,7 +28,7 @@ const CONTACT_ITEMS = [
   {
     icon: '💼',
     label: { es: 'LinkedIn', en: 'LinkedIn' },
-    value: 'linkedin.com/in/cristian',
+    value: 'cristian-alejandro-diaz-rivera',
     href: 'https://www.linkedin.com/in/cristian-alejandro-diaz-rivera-212069240/',
     external: true,
   },
@@ -68,7 +68,7 @@ const Contact: React.FC<ContactProps> = ({ language }) => {
         </div>
 
         <a href="mailto:Alejod951@gmail.com" className="contact-cta">
-          {language === 'es' ? '📩 Enviarme un mensaje' : '📩 Send me a message'}
+          {language === 'es' ? 'Enviarme un mensaje' : 'Send me a message'}
         </a>
       </div>
 

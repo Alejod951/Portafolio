@@ -16,31 +16,37 @@ const SKILL_CATEGORIES: Category[] = [
   {
     title: 'Frontend',
     icon: '🎨',
-    color: '#5334ef',
+    color: '#7c6cff',
     skills: ['React', 'TypeScript', 'JavaScript', 'Next.js', 'HTML5', 'CSS3'],
   },
   {
     title: 'Backend',
     icon: '⚙️',
-    color: '#06b6d4',
+    color: '#22d3ee',
     skills: ['Node.js', 'Express', 'PHP', 'Laravel', 'Python', 'REST APIs'],
   },
   {
     title: { es: 'Bases de Datos', en: 'Databases' },
     icon: '🗄️',
-    color: '#10b981',
+    color: '#34d399',
     skills: ['PostgreSQL', 'MySQL', 'Prisma ORM'],
+  },
+  {
+    title: { es: 'Móvil', en: 'Mobile' },
+    icon: '📱',
+    color: '#f472b6',
+    skills: ['Kotlin', 'Android Studio', 'Offline Sync'],
   },
   {
     title: { es: 'Herramientas & DevOps', en: 'Tools & DevOps' },
     icon: '🛠️',
-    color: '#f59e0b',
-    skills: ['Git', 'GitHub', 'Docker', 'Vercel', 'Postman'],
+    color: '#fbbf24',
+    skills: ['Git', 'GitHub', 'AWS', 'Docker', 'Vercel', 'Postman'],
   },
   {
     title: { es: 'Metodologías', en: 'Methodologies' },
     icon: '📋',
-    color: '#ec4899',
+    color: '#fb923c',
     skills: ['Scrum', 'Agile', 'IA & Automation', 'WebSockets'],
   },
 ];
@@ -62,10 +68,9 @@ const Skills: React.FC<SkillsProps> = ({ language }) => {
           <div
             key={i}
             className="skill-category"
-            style={{ '--accent': cat.color } as React.CSSProperties}
+            style={{ '--cat': cat.color } as React.CSSProperties}
           >
             <div className="skill-category-header">
-              <span className="skill-icon">{cat.icon}</span>
               <h3>{getTitle(cat.title)}</h3>
             </div>
             <div className="skill-tags">

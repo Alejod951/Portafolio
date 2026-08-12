@@ -60,7 +60,9 @@ const About: React.FC<AboutProps> = ({ language }) => {
             <span className="highlight-icon">🌐</span>
             <div>
               <h3 className="highlight-number">Full Stack</h3>
-              <p className="highlight-label">Frontend & Backend</p>
+              <p className="highlight-label">
+                {language === 'es' ? 'Web, Móvil & Cloud' : 'Web, Mobile & Cloud'}
+              </p>
             </div>
           </div>
         </div>

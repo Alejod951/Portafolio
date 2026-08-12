@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/HomePage.css';
-import profileImage from '../assets/profile.png';
+import profileImage from '../assets/profile-2026.png';
 
 interface HomePageProps {
   language: 'es' | 'en';
@@ -21,7 +21,7 @@ const HomePage: React.FC<HomePageProps> = ({ language }) => {
 
         <div className="hero-text">
           <p className="hero-greeting">
-            {language === 'es' ? '👋 Hola, soy' : '👋 Hello, I\'m'}
+            {language === 'es' ? 'Hola, soy' : 'Hello, I\'m'}
           </p>
           <h1 className="hero-name">
             Cristian Alejandro<br />Díaz Rivera
@@ -39,12 +39,12 @@ const HomePage: React.FC<HomePageProps> = ({ language }) => {
 
           <div className="hero-buttons">
             <a
-              href="https://drive.usercontent.google.com/download?id=1j242GOBmFMrPmx_mGiIe3W6gnOlPTtUA&export=download&authuser=0&confirm=t&uuid=363eb3b4-9f79-4b90-99ec-83c6dc6fb980&at=ALBwUgnphbb0iXCNW6i_o8erH4nc:1776278932748"
+              href="https://drive.usercontent.google.com/download?id=1Ybyp-SUYUVc8umtQjluwPvEQuYK-JuGx&export=download&authuser=0"
               className="btn-primary"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {language === 'es' ? '📄 Descargar CV' : '📄 Download CV'}
+              {language === 'es' ? 'Descargar CV' : 'Download CV'}
             </a>
             <button className="btn-secondary" onClick={() => scrollTo('contact')}>
               {language === 'es' ? 'Contáctame' : 'Contact Me'}
@@ -62,7 +62,7 @@ const HomePage: React.FC<HomePageProps> = ({ language }) => {
             </a>
             <span className="social-divider">|</span>
             <a
-              href="https://linkedin.com/in/cristian"
+              href="https://www.linkedin.com/in/cristian-alejandro-diaz-rivera-212069240/"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
